@@ -1,15 +1,15 @@
 # JosueLopez.io
 Personal Website
 
-A static, dependency-free portfolio site (HTML, CSS, vanilla JavaScript) with a Frutiger Aero look.
+A static, dependency-free portfolio site (HTML, CSS, vanilla JavaScript) with a simple, minimal design.
 Open `index.html` directly in a browser, or serve the folder with any static host (e.g. GitHub Pages).
 
 ## Structure
 
 ```
 index.html                  Main page (all sections)
-css/styles.css              Design tokens, components, sections, responsive + reduced-motion rules
-js/main.js                  Mobile nav, active-section highlight, scroll reveal, experience filter, hero parallax
+css/styles.css              Design tokens, components, sections, responsive rules
+js/main.js                  Mobile nav menu and active-section highlight
 assets/img/                 Profile photo
 assets/favicon.svg          Site icon
 assets/resume/              Downloadable resume PDF
