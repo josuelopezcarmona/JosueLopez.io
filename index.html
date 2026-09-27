@@ -3,23 +3,678 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Josue Lopez</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Josue Lopez-Carmona | Computer Science Student at NC State</title>
+  <meta name="description" content="Josue Lopez-Carmona is a Computer Science student at North Carolina State University seeking a software engineering internship in web design and development. See projects, experience, skills, and resume.">
+  <meta name="author" content="Josue Lopez-Carmona">
+  <meta name="theme-color" content="#1b9fe6">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Josue Lopez-Carmona | Computer Science Student at NC State">
+  <meta property="og:description" content="Computer Science student at NC State seeking a software engineering internship in web design and development.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/img/josue-lopez-carmona.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Josue Lopez-Carmona",
+    "email": "mailto:jlopezc2@ncsu.edu",
+    "address": { "@type": "PostalAddress", "addressLocality": "Raleigh", "addressRegion": "NC" },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "North Carolina State University" },
+    "sameAs": ["https://github.com/josuelopezcarmona"]
+  }
+  </script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-content">
-      <h1 class="name">Josue Lopez</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon + decoration sprite -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="cloudGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/>
+        <stop offset="0.7" stop-color="#f4fbff"/>
+        <stop offset="1" stop-color="#d9efff"/>
+      </linearGradient>
+      <linearGradient id="leafGrad" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#2a8a2c"/>
+        <stop offset="0.55" stop-color="#6cd046"/>
+        <stop offset="1" stop-color="#c9f78e"/>
+      </linearGradient>
+      <symbol id="cloud" viewBox="0 0 220 110">
+        <g fill="url(#cloudGrad)">
+          <circle cx="62" cy="66" r="32"/>
+          <circle cx="104" cy="48" r="42"/>
+          <circle cx="152" cy="64" r="30"/>
+          <circle cx="182" cy="80" r="20"/>
+          <rect x="30" y="66" width="172" height="34" rx="17"/>
+        </g>
+        <ellipse cx="96" cy="30" rx="26" ry="10" fill="#fff" opacity=".9"/>
+      </symbol>
+      <symbol id="leaf" viewBox="0 0 64 64">
+        <path d="M6 58C6 30 26 8 58 6c-1 32-22 52-52 52z" fill="url(#leafGrad)"/>
+        <path d="M8 56C22 40 36 26 54 10" fill="none" stroke="#e9ffd0" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+        <path d="M18 18c10-8 22-11 34-10-4 6-12 10-22 12" fill="#fff" opacity=".35"/>
+      </symbol>
+
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.7.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10.2 10.2 0 0 0 22 12.2C22 6.6 17.5 2 12 2z"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+      <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></symbol>
+      <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 13l2-6h14l2 6v5H3z"/><path d="M3 13h18"/><circle cx="7.5" cy="15.5" r="1.2"/><circle cx="16.5" cy="15.5" r="1.2"/><path d="M5 18v2M19 18v2"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V3h6v1M9 11l2 2 4-4M9 17h6"/></symbol>
+      <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9l3 3-3 3M12 15h5"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+      <symbol id="i-flow" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="6" rx="1.5"/><rect x="14" y="15" width="7" height="6" rx="1.5"/><path d="M6.5 9v3.5h11V15"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 13.8c2.1.8 3.5 3 3.5 5.7"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Navigation -->
+  <header class="site-nav">
+    <nav class="container nav-shell" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Josue Lopez-Carmona, back to top">
+        <span class="orb brand-orb" aria-hidden="true"><span>JL</span></span>
+        <span class="brand-name">Josue Lopez-Carmona</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-aqua btn-sm nav-resume" href="assets/resume/Josue-Lopez-Carmona-Resume.pdf" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Resume
+        </a>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <!-- Page content goes here -->
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-scene" aria-hidden="true">
+        <div class="sun-layer" data-parallax="0.35">
+          <div class="sun-rays"></div>
+          <div class="sun"></div>
+          <span class="flare flare-1"></span>
+          <span class="flare flare-2"></span>
+          <span class="flare flare-3"></span>
+        </div>
+        <div class="cloud-layer" data-parallax="0.22">
+          <svg class="cloud" style="--x:8vw;--y:14%;--w:180px;--dur:140s;--delay:-20s;--o:.75"><use href="#cloud"/></svg>
+          <svg class="cloud" style="--x:58vw;--y:8%;--w:140px;--dur:170s;--delay:-90s;--o:.65"><use href="#cloud"/></svg>
+          <svg class="cloud" style="--x:34vw;--y:30%;--w:120px;--dur:150s;--delay:-60s;--o:.55"><use href="#cloud"/></svg>
+        </div>
+        <div class="cloud-layer" data-parallax="0.1">
+          <svg class="cloud" style="--x:-4vw;--y:52%;--w:300px;--dur:110s;--delay:-10s"><use href="#cloud"/></svg>
+          <svg class="cloud" style="--x:70vw;--y:44%;--w:260px;--dur:125s;--delay:-70s"><use href="#cloud"/></svg>
+        </div>
+        <div class="bubbles">
+          <span style="--x:6%;--s:26px;--d:16s;--delay:-2s"></span>
+          <span style="--x:16%;--s:14px;--d:12s;--delay:-7s"></span>
+          <span style="--x:27%;--s:34px;--d:19s;--delay:-11s"></span>
+          <span style="--x:41%;--s:18px;--d:14s;--delay:-4s"></span>
+          <span style="--x:55%;--s:24px;--d:17s;--delay:-14s"></span>
+          <span style="--x:67%;--s:12px;--d:11s;--delay:-6s"></span>
+          <span style="--x:78%;--s:30px;--d:20s;--delay:-9s"></span>
+          <span style="--x:90%;--s:16px;--d:13s;--delay:-1s"></span>
+        </div>
+        <svg class="hills" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#b4ec7a"/>
+              <stop offset="1" stop-color="#5cb83c"/>
+            </linearGradient>
+            <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#8fe05a"/>
+              <stop offset="0.6" stop-color="#3fa635"/>
+              <stop offset="1" stop-color="#2a8a2c"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 176C220 104 430 116 700 164S1180 112 1440 150V320H0Z" fill="url(#hillBack)"/>
+          <path d="M0 236C290 168 580 190 860 232S1250 202 1440 216V320H0Z" fill="url(#hillFront)"/>
+          <path d="M0 236C290 168 580 190 860 232S1250 202 1440 216" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3"/>
+          <path d="M0 300C360 272 760 268 1080 286S1360 300 1440 294V320H0Z" fill="#e3f5ff"/>
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy glass glass--blur">
+          <p class="hero-hello"><span class="sun-dot" aria-hidden="true"></span>Hi, I'm</p>
+          <h1 id="hero-title" class="hero-name">Josue <span>Lopez-Carmona</span></h1>
+          <p class="hero-role">
+            <span class="orb orb--sm" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>
+            Computer Science Student · NC State University
+          </p>
+          <p class="hero-intro">
+            I build full-stack and Java applications, from Spring Boot REST APIs and MySQL databases
+            to React front ends. I'm looking for a software engineering internship in web design and development.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-aqua" href="assets/resume/Josue-Lopez-Carmona-Resume.pdf" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>View My Resume
+            </a>
+            <a class="btn btn-glass" href="#projects">
+              Explore My Work<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+          </div>
+          <ul class="hero-meta">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Raleigh, NC</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:jlopezc2@ncsu.edu">jlopezc2@ncsu.edu</a></li>
+            <li><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg><a href="https://github.com/josuelopezcarmona" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+
+        <figure class="hero-photo">
+          <div class="photo-halo" aria-hidden="true"></div>
+          <div class="photo-float">
+            <div class="photo-frame">
+              <img src="assets/img/josue-lopez-carmona.webp" width="1023" height="1535"
+                   alt="Josue Lopez-Carmona smiling in a black suit, white shirt, and striped tie"
+                   fetchpriority="high" decoding="async">
+              <span class="photo-gloss" aria-hidden="true"></span>
+            </div>
+            <img class="photo-reflection" src="assets/img/josue-lopez-carmona.webp" alt="" aria-hidden="true" width="1023" height="1535" decoding="async">
+            <svg class="photo-leaf photo-leaf--a" aria-hidden="true"><use href="#leaf"/></svg>
+            <svg class="photo-leaf photo-leaf--b" aria-hidden="true"><use href="#leaf"/></svg>
+          </div>
+          <span class="photo-bubble photo-bubble--1" aria-hidden="true"></span>
+          <span class="photo-bubble photo-bubble--2" aria-hidden="true"></span>
+          <span class="photo-bubble photo-bubble--3" aria-hidden="true"></span>
+          <figcaption class="status-chip">
+            <span class="status-dot" aria-hidden="true"></span>Seeking a SWE internship
+          </figcaption>
+        </figure>
+      </div>
+
+      <a class="scroll-cue" href="#about">
+        <span>Scroll to About</span>
+        <span class="orb orb--sm" aria-hidden="true"><svg class="icon"><use href="#i-chevron-down"/></svg></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <svg class="deco-leaf deco-leaf--about" aria-hidden="true"><use href="#leaf"/></svg>
+      <span class="deco-bubble deco-bubble--a" aria-hidden="true"></span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="orb orb--xs" aria-hidden="true"><svg class="icon"><use href="#i-user"/></svg></span>About</p>
+          <h2 id="about-title" class="section-title">Get to know me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-story glass reveal">
+            <p>
+              I'm working toward a <strong>B.S. in Computer Science at North Carolina State University</strong>,
+              with graduation expected in December 2027. My recent projects range from a full-stack ordering system
+              built with a four-person team to Java applications designed around custom data structures,
+              UML class diagrams, and JUnit testing.
+            </p>
+            <p>
+              Beyond code, I'm a <strong>Founding Member of Beta Upsilon Chi</strong> at NC State. I led the chartering
+              process that got the organization officially recognized in 10 months. I've also served as
+              <strong>Event Coordinator for the Society of Hispanic Professional Engineers (SHPE)</strong>, planning
+              technical workshops and networking events.
+            </p>
+            <p>
+              I've also worked as a lead server, on a construction crew, and as a barista in Oaxaca, Mexico. In those jobs
+              I mentored newer teammates, ran pre-shift huddles, and learned to stay organized in fast-paced environments.
+            </p>
+          </div>
+
+          <ul class="facts" aria-label="Quick facts">
+            <li class="fact glass reveal" style="--i:1">
+              <span class="orb" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>
+              <span><span class="fact-label">Studying</span><span class="fact-value">B.S. Computer Science, NC State</span></span>
+            </li>
+            <li class="fact glass reveal" style="--i:2">
+              <span class="orb orb--sun" aria-hidden="true"><svg class="icon"><use href="#i-calendar"/></svg></span>
+              <span><span class="fact-label">Graduating</span><span class="fact-value">Expected December 2027</span></span>
+            </li>
+            <li class="fact glass reveal" style="--i:3">
+              <span class="orb orb--green" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span><span class="fact-label">Based in</span><span class="fact-value">Raleigh, NC</span></span>
+            </li>
+            <li class="fact glass reveal" style="--i:4">
+              <span class="orb orb--aqua" aria-hidden="true"><svg class="icon"><use href="#i-target"/></svg></span>
+              <span><span class="fact-label">Looking for</span><span class="fact-value">SWE internship in web design &amp; development</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <span class="deco-bubble deco-bubble--b" aria-hidden="true"></span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="orb orb--xs orb--aqua" aria-hidden="true"><svg class="icon"><use href="#i-code"/></svg></span>Projects</p>
+          <h2 id="projects-title" class="section-title">Things I've built</h2>
+          <p class="section-lead">From a team-built full-stack web app to Java systems designed from the data structures up.</p>
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card glass reveal" style="--i:0">
+            <div class="project-banner project-banner--aqua" aria-hidden="true">
+              <span class="project-icon"><svg class="icon"><use href="#i-coffee"/></svg></span>
+            </div>
+            <div class="project-body">
+              <p class="project-when"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Fall 2026 · Team of 4</p>
+              <h3 class="project-title">CoffeeMaker</h3>
+              <p class="project-sub">Full-Stack Beverage Ordering System</p>
+              <ul class="points">
+                <li>Built a full-stack ordering system with a four-person team: a Spring Boot REST API backed by MySQL through JPA, with a React/Vite front end.</li>
+                <li>Designed the REST API endpoints and documented design trade-offs and UI wireframes for new inventory and ingredient features.</li>
+                <li>Collaborated through GitHub issues, feature branches, and pull request reviews.</li>
+              </ul>
+              <ul class="chips" aria-label="Technologies used">
+                <li class="chip">Java</li><li class="chip">Spring Boot</li><li class="chip">MySQL</li><li class="chip">JPA</li><li class="chip">React</li><li class="chip">Vite</li><li class="chip">GitHub</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" style="--i:1">
+            <div class="project-banner project-banner--green" aria-hidden="true">
+              <span class="project-icon"><svg class="icon"><use href="#i-car"/></svg></span>
+            </div>
+            <div class="project-body">
+              <p class="project-when"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Summer 2026</p>
+              <h3 class="project-title">WolfDash</h3>
+              <p class="project-sub">Ride-Share Management System</p>
+              <ul class="points">
+                <li>Designed the system with a full UML class diagram and a written design rationale.</li>
+                <li>Implemented core functionality across custom data structures: hash maps, trees, and priority queues.</li>
+                <li>Wrote structured test cases and JUnit test suites covering core operations.</li>
+                <li>Benchmarked data structure choices, using log-log chart analysis to validate algorithmic complexity.</li>
+              </ul>
+              <ul class="chips" aria-label="Technologies used">
+                <li class="chip">Java</li><li class="chip">JUnit</li><li class="chip">UML</li><li class="chip">Data Structures</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" style="--i:2">
+            <div class="project-banner project-banner--sun" aria-hidden="true">
+              <span class="project-icon"><svg class="icon"><use href="#i-clipboard"/></svg></span>
+            </div>
+            <div class="project-body">
+              <p class="project-when"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Spring 2026</p>
+              <h3 class="project-title">WolfRegrade</h3>
+              <p class="project-sub">Regrade Request Management System</p>
+              <ul class="points">
+                <li>Built a Java desktop app with an MVC architecture that manages student regrade requests for course assignments.</li>
+                <li>Wrote generic linked-list and array-based stack data structures from scratch, with custom iterators.</li>
+                <li>Designed a polymorphic class hierarchy (an abstract base class with 4 request types) and a file reader/writer that saves course data in a custom text format.</li>
+              </ul>
+              <ul class="chips" aria-label="Technologies used">
+                <li class="chip">Java</li><li class="chip">MVC</li><li class="chip">Data Structures</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section experience" aria-labelledby="experience-title">
+      <svg class="deco-leaf deco-leaf--exp" aria-hidden="true"><use href="#leaf"/></svg>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="orb orb--xs orb--green" aria-hidden="true"><svg class="icon"><use href="#i-briefcase"/></svg></span>Experience</p>
+          <h2 id="experience-title" class="section-title">Leadership &amp; work</h2>
+          <p class="section-lead">Building organizations on campus, and learning teamwork in fast-paced jobs.</p>
+        </header>
+
+        <div class="filter-group reveal" role="group" aria-label="Filter experience">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="leadership" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Leadership
+          </button>
+          <button class="filter-btn" type="button" data-filter="work" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Work
+          </button>
+        </div>
+        <p class="visually-hidden" aria-live="polite" id="filter-status"></p>
+
+        <ol class="timeline">
+          <li class="tl-item reveal" data-type="leadership">
+            <span class="tl-node orb orb--green" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg></span>
+            <article class="tl-card glass">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-role">Founding Member</h3>
+                  <p class="tl-org">Beta Upsilon Chi · North Carolina State University</p>
+                </div>
+                <span class="tag tag--green">Leadership</span>
+              </div>
+              <ul class="points">
+                <li>Led the chartering process that established Beta Upsilon Chi as an officially recognized campus organization, meeting NC State and national headquarters requirements for approval in 10 months.</li>
+                <li>Helped draft the founding chapter bylaws and set up the initial leadership and governance structure.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="tl-item reveal" data-type="leadership">
+            <span class="tl-node orb orb--green" aria-hidden="true"><svg class="icon"><use href="#i-users"/></svg></span>
+            <article class="tl-card glass">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-role">Event Coordinator</h3>
+                  <p class="tl-org">Society of Hispanic Professional Engineers (SHPE)</p>
+                </div>
+                <span class="tag tag--green">Leadership</span>
+              </div>
+              <ul class="points">
+                <li>Planned and ran 10+ club events per semester, including technical workshops and networking events drawing 30+ attendees, to build career readiness and personal growth.</li>
+                <li>Represented SHPE as liaison to NC State, coordinating outreach and collaboration with other student organizations.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="tl-item reveal" data-type="work">
+            <span class="tl-node orb" aria-hidden="true"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+            <article class="tl-card glass">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-role">Lead Server</h3>
+                  <p class="tl-org">Coco Bongo Mexican Express</p>
+                </div>
+                <span class="tag">Work</span>
+              </div>
+              <ul class="tl-meta">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Jan 2024 – Jul 2025</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>NC</li>
+              </ul>
+              <ul class="points">
+                <li>Ran pre-shift huddles, communicating daily specials and service goals to the team.</li>
+                <li>Mentored newer staff on sequence of service, menu fluency, and allergen protocols during live shifts.</li>
+                <li>Handled 50+ POS transactions per shift, serving 100+ guests daily across 5 tables.</li>
+                <li>Sharpened multitasking and time management by handling orders, serving, and side work efficiently.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="tl-item reveal" data-type="work">
+            <span class="tl-node orb" aria-hidden="true"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+            <article class="tl-card glass">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-role">Construction Worker</h3>
+                  <p class="tl-org">House Renewal Department</p>
+                </div>
+                <span class="tag">Work</span>
+              </div>
+              <ul class="tl-meta">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Jul 2022 – Sep 2023</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>New Bern, NC</li>
+              </ul>
+              <ul class="points">
+                <li>Operated heavy machinery, power tools, and concrete mixers safely and efficiently on commercial sites.</li>
+                <li>Supported a 10-person crew with drywall installation and site cleanup, contributing to 3+ projects completed on schedule.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="tl-item reveal" data-type="work">
+            <span class="tl-node orb" aria-hidden="true"><svg class="icon"><use href="#i-coffee"/></svg></span>
+            <article class="tl-card glass">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-role">Barista</h3>
+                  <p class="tl-org">Cafe La Fe</p>
+                </div>
+                <span class="tag">Work</span>
+              </div>
+              <ul class="tl-meta">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Nov 2019 – Jul 2021</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Oaxaca, Mexico</li>
+              </ul>
+              <ul class="points">
+                <li>Prepared drinks and food for 50+ customers daily while maintaining high standards of cleanliness and service.</li>
+                <li>Managed multiple tasks in a busy environment, improving operational efficiency and customer satisfaction.</li>
+                <li>Kept the shop running smoothly by maintaining cleanliness and supporting teammates.</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <span class="deco-bubble deco-bubble--c" aria-hidden="true"></span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="orb orb--xs orb--sun" aria-hidden="true"><svg class="icon"><use href="#i-layers"/></svg></span>Skills</p>
+          <h2 id="skills-title" class="section-title">My toolkit</h2>
+          <p class="section-lead">The languages and tools on my resume, plus the frameworks and practices I've used in my projects.</p>
+        </header>
+
+        <div class="skills-grid">
+          <section class="skill-card glass reveal" style="--i:0" aria-labelledby="sk-lang">
+            <div class="skill-head">
+              <span class="orb" aria-hidden="true"><svg class="icon"><use href="#i-code"/></svg></span>
+              <h3 id="sk-lang">Languages</h3>
+            </div>
+            <ul class="chips">
+              <li class="chip">Java</li><li class="chip">C</li><li class="chip">JavaScript</li><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">MySQL</li>
+            </ul>
+          </section>
+
+          <section class="skill-card glass reveal" style="--i:1" aria-labelledby="sk-tools">
+            <div class="skill-head">
+              <span class="orb orb--aqua" aria-hidden="true"><svg class="icon"><use href="#i-terminal"/></svg></span>
+              <h3 id="sk-tools">Developer Tools</h3>
+            </div>
+            <ul class="chips">
+              <li class="chip">Git</li><li class="chip">GitHub</li><li class="chip">Eclipse</li><li class="chip">IntelliJ</li><li class="chip">MySQL Workbench</li>
+            </ul>
+          </section>
+
+          <section class="skill-card glass reveal" style="--i:2" aria-labelledby="sk-fw">
+            <div class="skill-head">
+              <span class="orb orb--green" aria-hidden="true"><svg class="icon"><use href="#i-layers"/></svg></span>
+              <h3 id="sk-fw">Frameworks &amp; Libraries</h3>
+            </div>
+            <ul class="chips">
+              <li class="chip">Spring Boot</li><li class="chip">JPA</li><li class="chip">React</li><li class="chip">Vite</li><li class="chip">JUnit</li>
+            </ul>
+            <p class="skill-note">Used in my projects</p>
+          </section>
+
+          <section class="skill-card glass reveal" style="--i:3" aria-labelledby="sk-eng">
+            <div class="skill-head">
+              <span class="orb orb--sun" aria-hidden="true"><svg class="icon"><use href="#i-flow"/></svg></span>
+              <h3 id="sk-eng">Software Design &amp; Practices</h3>
+            </div>
+            <ul class="chips">
+              <li class="chip">REST API design</li><li class="chip">MVC architecture</li><li class="chip">Object-oriented design</li>
+              <li class="chip">UML class diagrams</li><li class="chip">Data structures</li><li class="chip">Algorithm analysis</li>
+              <li class="chip">Unit testing</li><li class="chip">UI wireframing</li><li class="chip">Pull request reviews</li>
+            </ul>
+            <p class="skill-note">Used in my projects</p>
+          </section>
+
+          <section class="skill-card glass reveal" style="--i:4" aria-labelledby="sk-people">
+            <div class="skill-head">
+              <span class="orb orb--green" aria-hidden="true"><svg class="icon"><use href="#i-heart"/></svg></span>
+              <h3 id="sk-people">People Skills</h3>
+            </div>
+            <ul class="chips">
+              <li class="chip">Team leadership</li><li class="chip">Mentoring</li><li class="chip">Event planning</li>
+              <li class="chip">Cross-organization outreach</li><li class="chip">Customer service</li><li class="chip">Time management</li>
+            </ul>
+            <p class="skill-note">From my leadership and work experience</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section education" aria-labelledby="education-title">
+      <svg class="deco-leaf deco-leaf--edu" aria-hidden="true"><use href="#leaf"/></svg>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="orb orb--xs" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>Education</p>
+          <h2 id="education-title" class="section-title">Where I'm learning</h2>
+        </header>
+
+        <article class="edu-card glass reveal">
+          <span class="orb orb--xl" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>
+          <div class="edu-info">
+            <h3 class="edu-school">North Carolina State University</h3>
+            <p class="edu-degree">B.S. in Computer Science</p>
+            <ul class="tl-meta">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Expected December 2027</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Raleigh, NC</li>
+            </ul>
+          </div>
+
+          <div class="milestones-wrap">
+            <h4 class="milestones-title">Milestones</h4>
+            <ol class="milestones">
+              <li class="milestone">
+                <span class="orb orb--sm orb--sun" aria-hidden="true"><svg class="icon"><use href="#i-clipboard"/></svg></span>
+                <span class="milestone-when">Spring 2026</span>
+                <span class="milestone-what">WolfRegrade project</span>
+              </li>
+              <li class="milestone">
+                <span class="orb orb--sm orb--green" aria-hidden="true"><svg class="icon"><use href="#i-car"/></svg></span>
+                <span class="milestone-when">Summer 2026</span>
+                <span class="milestone-what">WolfDash project</span>
+              </li>
+              <li class="milestone">
+                <span class="orb orb--sm orb--aqua" aria-hidden="true"><svg class="icon"><use href="#i-coffee"/></svg></span>
+                <span class="milestone-when">Fall 2026</span>
+                <span class="milestone-what">CoffeeMaker project, with a team of 4</span>
+              </li>
+              <li class="milestone">
+                <span class="orb orb--sm" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>
+                <span class="milestone-when">December 2027</span>
+                <span class="milestone-what">B.S. in Computer Science (expected)</span>
+              </li>
+            </ol>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section section--tight" aria-labelledby="resume-title">
+      <div class="container">
+        <div class="resume-band reveal">
+          <svg class="resume-cloud resume-cloud--a" aria-hidden="true"><use href="#cloud"/></svg>
+          <svg class="resume-cloud resume-cloud--b" aria-hidden="true"><use href="#cloud"/></svg>
+          <div class="resume-copy">
+            <p class="kicker"><span class="orb orb--xs orb--green" aria-hidden="true"><svg class="icon"><use href="#i-file"/></svg></span>Resume</p>
+            <h2 id="resume-title" class="section-title">Want the full picture?</h2>
+            <p class="section-lead">Education, projects, leadership, and experience, all on one page.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-aqua" href="assets/resume/Josue-Lopez-Carmona-Resume.pdf" download>
+                <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download Resume
+              </a>
+              <a class="btn btn-glass" href="assets/resume/Josue-Lopez-Carmona-Resume.pdf" target="_blank" rel="noopener">
+                View PDF<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="doc-illus" aria-hidden="true">
+            <div class="doc-sheet">
+              <span class="doc-title"></span>
+              <span class="doc-sub"></span>
+              <span class="doc-line doc-line--accent"></span>
+              <span class="doc-line"></span>
+              <span class="doc-line doc-line--short"></span>
+              <span class="doc-line doc-line--accent"></span>
+              <span class="doc-line"></span>
+              <span class="doc-line"></span>
+              <span class="doc-line doc-line--short"></span>
+            </div>
+            <span class="orb orb--green doc-badge"><svg class="icon"><use href="#i-download"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="orb orb--xs orb--aqua" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></span>Contact</p>
+          <h2 id="contact-title" class="section-title">Let's connect</h2>
+          <p class="section-lead">Have an internship opportunity or want to connect? Reach out anytime.</p>
+        </header>
+
+        <div class="contact-grid">
+          <a class="contact-card glass reveal" style="--i:0" href="mailto:jlopezc2@ncsu.edu">
+            <span class="orb" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></span>
+            <span class="contact-text"><span class="contact-label">Email</span><span class="contact-value">jlopezc2@ncsu.edu</span></span>
+            <svg class="icon contact-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+          <a class="contact-card glass reveal" style="--i:1" href="tel:+12527250179">
+            <span class="orb orb--green" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></span>
+            <span class="contact-text"><span class="contact-label">Phone</span><span class="contact-value">(252) 725-0179</span></span>
+            <svg class="icon contact-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+          <a class="contact-card glass reveal" style="--i:2" href="https://github.com/josuelopezcarmona" target="_blank" rel="noopener">
+            <span class="orb orb--aqua" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-github"/></svg></span>
+            <span class="contact-text"><span class="contact-label">GitHub</span><span class="contact-value">github.com/josuelopezcarmona</span></span>
+            <svg class="icon contact-arrow" aria-hidden="true"><use href="#i-external"/></svg>
+          </a>
+          <div class="contact-card glass reveal" style="--i:3">
+            <span class="orb orb--sun" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+            <span class="contact-text"><span class="contact-label">Location</span><span class="contact-value">Raleigh, NC</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="water" aria-hidden="true">
+      <svg class="wave wave--back" viewBox="0 0 2880 100" preserveAspectRatio="none"><path d="M0 50Q180 20 360 50T720 50T1080 50T1440 50T1800 50T2160 50T2520 50T2880 50V100H0Z"/></svg>
+      <svg class="wave wave--front" viewBox="0 0 2880 100" preserveAspectRatio="none"><path d="M0 50Q180 20 360 50T720 50T1080 50T1440 50T1800 50T2160 50T2520 50T2880 50V100H0Z"/></svg>
+    </div>
+    <div class="container footer-inner">
+      <p class="footer-name">Josue Lopez-Carmona</p>
+      <p class="footer-small">© <span id="year">2026</span> · Built with HTML, CSS &amp; JavaScript</p>
+      <a class="to-top" href="#home">
+        Back to top<svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
