@@ -1,0 +1,10 @@
+/* Styles specific to the App shell (header, page body, and footer). */
+
+.footer {
+  display: block;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #212529;
+  color: #ffffff;
+}

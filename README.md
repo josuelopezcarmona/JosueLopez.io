@@ -14,7 +14,14 @@ assets/img/                 Profile photo
 assets/favicon.svg          Site icon
 assets/resume/              Downloadable resume PDF
 resume/index.html           Print-ready source for the resume PDF
+code/index.html             Read-only code viewer for the projects below
+code/manifest.js            List of files shown in the viewer (add new files here)
+code/coffeemaker/           CoffeeMaker backend (Spring Boot) and frontend (React/Vite) source
+code/wolfdash/              WolfDash (RideShareManager) source, tests, and input files
+code/wolfregrade/           WolfRegrade source files
 ```
+
+The code viewer loads files with `fetch`, so it needs to be served over HTTP (GitHub Pages works); it won't load files when `code/index.html` is opened directly from disk.
 
 ## Updating the resume PDF
 
