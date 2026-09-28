@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Code | Josue Lopez-Carmona</title>
+  <meta name="description" content="Source code for CoffeeMaker, WolfDash, and WolfRegrade, projects by Josue Lopez-Carmona.">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="manifest.js" defer></script>
+  <script src="viewer.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#viewer-main">Skip to code</a>
+
+  <header class="site-nav">
+    <nav class="container nav-bar" aria-label="Primary">
+      <a class="brand" href="../index.html">Josue Lopez-Carmona</a>
+      <a class="btn btn-secondary btn-sm" href="../index.html#projects">Back to portfolio</a>
+    </nav>
+  </header>
+
+  <div class="container viewer">
+    <nav class="viewer-sidebar" id="viewer-files" aria-label="Project files">
+      <noscript><p>JavaScript is needed to browse the code.</p></noscript>
+    </nav>
+
+    <main class="viewer-main" id="viewer-main">
+      <div class="file-head">
+        <div>
+          <h1 id="file-name">Select a file</h1>
+          <p id="file-path" class="file-path"></p>
+          <p id="file-author" class="file-author"></p>
+        </div>
+        <a id="raw-link" class="btn btn-secondary btn-sm" href="#" target="_blank" rel="noopener" hidden>View raw</a>
+      </div>
+      <pre class="code-block"><code id="code"></code></pre>
+    </main>
+  </div>
+</body>
+</html>
